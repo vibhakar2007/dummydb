@@ -1,0 +1,16 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Package/build files
+build/
+dist/
+*.egg-info/
+
+# VS Code / IDE files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
