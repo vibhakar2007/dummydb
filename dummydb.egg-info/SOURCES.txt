@@ -1,8 +1,0 @@
-README.md
-setup.py
-dummydb/__init__.py
-dummydb/main.py
-dummydb.egg-info/PKG-INFO
-dummydb.egg-info/SOURCES.txt
-dummydb.egg-info/dependency_links.txt
-dummydb.egg-info/top_level.txt
