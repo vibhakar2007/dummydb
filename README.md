@@ -1,0 +1,67 @@
+# DummyDB
+
+DummyDB is a lightweight, in-memory Python database for testing, prototyping, and mocking database operations without installing any external database servers.
+
+It mimics the basic behavior of real databases like MongoDB or SQLite but runs entirely in memory. Ideal for developers who want fast CRUD operations without setup overhead.
+
+![PyPI version](https://img.shields.io/pypi/v/dummydb)
+![License](https://img.shields.io/pypi/l/dummydb)
+
+
+## Features
+
+- In-memory storage (no installation required)
+- Table creation and management
+- CRUD operations: insert, find, update, delete
+- Save and load database to JSON
+- Lightweight and zero-dependency
+- Perfect for unit testing, demos, and small projects
+
+## Installation
+
+```bash
+pip install dummydb
+```
+
+## Functions
+```python
+> insert(data: dict)
+> find(query: dict)
+> update(query: dict, new_data: dict)
+> delete(query: dict)
+> to_json()
+> create_table(name: str)
+> get_table(name: str)
+> drop_table(name: str)
+> save_to_file(filepath: str)
+> load_from_file(filepath: str)
+```
+
+## Example Usage
+
+```python
+    from dummydb import Database
+
+    # Create a database
+    db = Database()
+
+    # Create a table
+    users = db.create_table("users")
+
+    # Insert records
+    users.insert({"name": "Vibhakar", "age": 17})
+    users.insert({"name": "Shiju", "age": 16})
+
+    # Query records
+    print(users.find({"age": 17}))
+
+    # Update records
+    users.update({"name": "Shiju"}, {"age": 17})
+
+    # Delete records
+    users.delete({"name": "Vibhakar"})
+
+    # Save/load
+    db.save_to_file("dummydb.json")
+    db.load_from_file("dummydb.json")
+```
