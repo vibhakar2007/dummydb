@@ -5,14 +5,14 @@ with open("README.md", "r", encoding="utf-8") as f:
 
 setup(
     name="dummydb",
-    version="0.1.5",
+    version="0.1.6",
     packages=find_packages(),
     install_requires=[
         # No external dependencies for now
     ],
     author="Vibhakar S",
     author_email="vibhakarsenth@gmail.com",
-    url="https://github.com/vibhakar2007/mockdb",
+    url="https://github.com/vibhakar2007/dummydb",
     license="MIT",
     description="A lightweight in-memory database for Python — perfect for testing and prototyping.",
     long_description=long_description,
